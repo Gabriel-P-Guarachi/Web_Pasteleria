@@ -1,0 +1,23 @@
+
+//box-sizing: content-box --> Esto es normal lo sumaremos al contenido el margin y el padinng
+//box-sizing: border-box --> Lo que suma al contenido lo restara al width del contenido padre asi que se matiene el tamaño original
+
+//Cuando una imagen se deforma  o se apreta al darla un max-width:100% el height lo colocamos auto
+
+//Podemos utilizar como media queries solo tres: pequeño mediano grande, en ese order
+
+//Las medidas rem es igual a la medida del tamaño base del html
+//html{font-size:20px} entonces si en otro lugar utilizamos font-size:1rem es equivalente de 20px font-size:2rem es equivalente a 40px por el tamaño definido en html 
+
+//La medida em tiene como base lo que el navegador tiene que es 16px por defecto es decir que 1em es 16px pero esto puede ser redeclarado si colocamos
+// font-size: 0.9em esta es la nueva base para calcular es decir calculara a partir de 14.5 px ya que ese es el 0.9 es decir que toma el valor relativo del padre
+
+@media (min-width: 360px)
+    body
+        background-color: red
+@media (min-width: 768px)
+    body
+        background-color: green
+@media (min-width: 1200px)
+    body
+        background-color: blue

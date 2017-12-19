@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAcA,yBAAyB;EACrB,IAAI;IACA,gBAAgB,EAAE,GAAG;AAC7B,yBAAyB;EACrB,IAAI;IACA,gBAAgB,EAAE,KAAK;AAC/B,0BAA0B;EACtB,IAAI;IACA,gBAAgB,EAAE,IAAI",
+"sources": ["../sass/style-general.sass"],
+"names": [],
+"file": "style-general.css"
+}
