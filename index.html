@@ -9,6 +9,7 @@
 
     <!-- Fuentes -->
     <link rel="stylesheet" href="css/materialdesignicons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <!-- Reiniciador de estilos -->
     <link rel="stylesheet" href="css/normalize.css">
     <!-- Framework bootstrap -->
@@ -20,11 +21,103 @@
 
 <body>
 
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-page">
+        <a class="navbar-brand" href="#">
+            <img class="navbar__image" src="images/logo/logoTipo.svg" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="mdi mdi-menu"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Categories
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Cake shop</a>
+                        <a class="dropdown-item" href="#">Bakery</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">See more...</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">My recipes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Add new recipe</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="slider">
+        <div class="slider__content">
+            <div class="slider__img">
+                <picture>
+                    <source srcset="images/slider/slide-1-responsive.png" media="(max-width: 576px)">
+                    <img class="slider__img--width" src="images/slider/slide-1.jpeg" alt="Slide 1">
+                </picture>
+            </div>
+            <div class="slider__img">
+                <picture>
+                    <source srcset="images/slider/slide-1-R-375px.png" media="(max-width: 420px)">
+                    <source srcset="images/slider/slide-2-responsive.png" media="(max-width: 576px)">
+                    <img class="slider__img--width" src="images/slider/slide-2.jpeg" alt="Slide 1">
+                </picture>
+            </div>
+            <div class="slider__img">
+                <picture>
+                    <source srcset="images/slider/slide-3-responsive.png" media="(max-width: 576px)">
+                    <img class="slider__img--width" src="images/slider/slide-3.jpeg" alt="Slide 1">
+                </picture>
+            </div>
+        </div>
+
+        <div class="slide__text">
+            <p class="slide__text--title">Encuetra</p>
+            <p class="slide__text--subTitle">MEJORES RECETAS</p>
+        </div>
+
+        <div class="slide__btnPrev"><i class="mdi mdi-chevron-left"></i></div>
+        <div class="slide__btnNext"><i class="mdi mdi-chevron-right"></i></div>
+
+    </div>
+
+
+    <div class="content-card">
+        <div class="container content-card__container">
+            <p class="content-card__title">sobre</p>
+            <p class="content-card__title--sub">Nuestra Panadería</p>
+            <p class="content-card__desc">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, debitis tempore pariatur sit odit repudiandae alias quo culpa delectus, facilis voluptate tempora? Tenetur sint consectetur, mollitia iusto error totam adipisci?
+            </p>
+            <a class="content-card__btn">Ver mas...</a>
+        </div>
+        <img class="content-card__img" src="images/samples/personaje-1.jpg" alt="">
+    </div>
+
+    <div class="content-card--rev">
+        <div class="container content-card__container--rev">
+            <p class="content-card__title">sin gluten</p>
+            <p class="content-card__title--sub">Productos</p>
+            <p class="content-card__desc">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, debitis tempore pariatur sit odit repudiandae alias quo culpa delectus, facilis voluptate tempora? Tenetur sint consectetur, mollitia iusto error totam adipisci?
+            </p>
+            <a class="content-card__btn">Comprar Ahora.</a>
+        </div>
+        <img class="content-card__img" src="images/samples/personaje-2.jpeg" alt="">
+    </div>
 
 
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 
 </html>

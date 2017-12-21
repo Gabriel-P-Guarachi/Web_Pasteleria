@@ -1,23 +1,232 @@
+$sizeText: 12px
+$primaryColor: #F44336
+$secondColor: #D32F2F
+$accentColor1: #FF8A80
 
-//box-sizing: content-box --> Esto es normal lo sumaremos al contenido el margin y el padinng
-//box-sizing: border-box --> Lo que suma al contenido lo restara al width del contenido padre asi que se matiene el tamaño original
+html
+    font-size: $sizeText
+    box-sizing: border-box
+body
+    font-family: 'Nunito', sans-serif
 
-//Cuando una imagen se deforma  o se apreta al darla un max-width:100% el height lo colocamos auto
+//Estilos del navbar
+.navbar
+    font-size: 1.2rem
+    text-transform: uppercase
+    & button:focus
+        outline: 5px auto #fff
+    & span.mdi
+        color: #fff
+        font-size: 2.5rem
+    & .navbar-nav
+        text-align: center
+    & .nav-item.active
+        background-color: $secondColor
+        border-radius: 0.5rem
+    & .dropdown-menu
+        background-color: $accentColor1
+        border: 0px
+        text-align: center
+        & .dropdown-item
+            color: #fff
+.navbar__image
+    width: 40px
+    border-radius: 0.5rem
+.navbar-light .navbar-toggler
+    border-color: #fff
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link
+    color: #fff
+.navbar-light .navbar-nav .nav-link
+    color: #fff
+    font-weight: bold
+    margin: 0px 10px
+    &:hover
+        background-color: $secondColor
+        border-radius: 0.5rem
+        color: #fff
+.bg-page
+    background-color: rgba(211,47,47, 0.3)
 
-//Podemos utilizar como media queries solo tres: pequeño mediano grande, en ese order
+//Estilos del slider
+.slider
+    width: 100%
+    overflow: hidden
+    position: relative
+.slide__text
+    background-color: rgba(227,227,227,0.8)
+    padding: 1.5rem
+    width: 70%
+    left: 15%
 
-//Las medidas rem es igual a la medida del tamaño base del html
-//html{font-size:20px} entonces si en otro lugar utilizamos font-size:1rem es equivalente de 20px font-size:2rem es equivalente a 40px por el tamaño definido en html 
+    position: absolute
+    top: calc(50% - 8.3rem)
 
-//La medida em tiene como base lo que el navegador tiene que es 16px por defecto es decir que 1em es 16px pero esto puede ser redeclarado si colocamos
-// font-size: 0.9em esta es la nueva base para calcular es decir calculara a partir de 14.5 px ya que ese es el 0.9 es decir que toma el valor relativo del padre
+    z-index: 100
+.slide__text--title
+    font-size: 4rem
+    font-weight: 600
+    text-align: center
 
-@media (min-width: 360px)
-    body
-        background-color: red
-@media (min-width: 768px)
-    body
-        background-color: green
-@media (min-width: 1200px)
-    body
-        background-color: blue
+    margin: 0px
+        
+.slide__text--subTitle
+    font-size: 4.6rem
+    font-weight: 700
+    text-align: center
+
+    margin: 0px
+        
+
+.slider__content,
+    display: flex
+    //El tamaño es la siguiente formula: nroImagenesSlide * 100%
+    width: 300%
+.slider__img
+    width: 100%
+.slider__img--width
+    display: block
+    width: 100%
+    height: 100vh
+.slide__btnPrev,
+.slide__btnNext
+    width: 3.5rem
+    height: 3.5rem
+    background: $accentColor1
+    color: #fff
+    position: absolute
+    top: calc(50% - 20px)
+    line-height: 3.5rem
+    font-size: 2rem
+    font-weight: bold
+    text-align: center
+    border-radius: 50%
+    cursor: pointer
+    z-index: 10
+    &:hover
+        background: $primaryColor
+.slide__btnPrev
+    left: 1rem
+.slide__btnNext
+    right: 1rem
+//Estilos para una card
+.content-card,
+.content-card--rev
+    display: flex    
+    margin: 2rem auto
+    width: 80%
+    max-width: 992px
+    align-items: center
+.content-card
+    flex-direction: row
+.content-card--rev
+    flex-direction: row-reverse
+.content-card__container,
+.content-card__container--rev
+    flex-basis: 500px
+.content-card__container    
+    padding-left: 0px
+    padding-right: 2.5rem
+.content-card__container--rev
+    padding-left: 2.5rem
+    padding-right: 0px
+.content-card__title
+    font-size: 2.5rem
+    font-style: italic
+    color: #795548
+.content-card__title--sub
+    font-size: 3rem
+    color: #4E342E
+    font-weight: bold
+.content-card__desc
+    color: #777
+    font-size: 1.8rem
+    text-align: justify
+.content-card__btn
+    font-weight: 700
+    color: #5D4037
+    text-transform: uppercase
+    font-size: 1.5rem
+        
+    background-color: #FFE57F 
+    padding: 10px   
+    margin-bottom: 2rem
+        
+    border-radius: 5px
+    float: right
+
+    cursor: pointer
+.content-card__img
+    width: 350px
+    height: 600px
+    flex-grow: 1
+
+@media (max-width:768px)
+    .navbar-light .navbar-nav .nav-link:hover
+        background-color: transparent
+@media (max-width: 420px)
+    //Estilos para el slide
+    .slide__btnPrev,
+    .slide__btnNext
+        top: initial
+        bottom: 2rem
+    .slide__btnPrev
+        left: 2rem
+    .slide__btnNext
+        right: 2rem
+    .slide__text
+        background-color: rgba(227,227,227,0.8)
+        padding: 1.5rem
+        width: 90%
+        left: 5%
+
+        position: absolute
+        top: calc(50% - 4.7rem)
+
+        z-index: 100
+    .slide__text--title
+        font-size: 2rem
+        font-weight: 600
+        margin: 0px
+        text-align: center
+    .slide__text--subTitle
+        font-size: 2.3rem
+        font-weight: 700
+        margin: 0px
+        text-align: center
+    //Estilos para una card
+    .content-card
+        display: flex
+        flex-direction: column
+        margin: 2rem 0px
+    .content-card__title
+        font-size: 2rem
+        font-style: italic
+        color: #795548
+    .content-card__title--sub
+        font-size: 2.5rem
+        color: #4E342E
+        font-weight: bold
+    .content-card__desc
+        color: #777
+        font-size: 1.3rem
+        text-align: justify
+    .content-card__btn
+        font-weight: 700
+        color: #5D4037
+        text-transform: uppercase
+        
+        background-color: #FFE57F 
+        padding: 10px   
+        margin-bottom: 2rem
+        
+        border-radius: 5px
+        float: right
+
+        cursor: pointer
+    .content-card__img
+        height: 400px
+
+@media (max-width: 320px)
+    //Estilos para el slide    
+    .slide__text--subTitle
+        font-size: 2rem
